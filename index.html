@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logo AR</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js">
+    </script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js">
+    </script>
+<!--     <script src="bhaibhai.js"> -->
+<!--     </script> -->
+    
+   <!-- <script>
+    AFRAME.registerComponent('soundhandler', {
+    tick: function () {
+           var entity = document.querySelector('[sound]');
+         if (document.querySelector('a-marker').object3D.visible == true) {
+            entity.components.sound.playSound();
+        } else {
+            entity.components.sound.stopSound();
+        }
+
+     }
+    });  
+    </script>-->
+    
+  </head>
+  
+    <body style="margin : 0px; overflow: hidden;">
+   <!-- <audio autoplay>
+        <source src="https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2FSound.ogg?1533259276554" type="audio/ogg">
+        <source src="https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2FSound.mp3?1533259270066" type="audio/mpeg">
+    </audio>--> 
+	  <a-scene embedded arjs="sourceType: webcam;">
+		
+      <!--a-assets timeout="5000">
+            <audio id="sound" crossorigin ="anonymous" src="https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2FAUD-%20bhai.mp3?1533612763908"></audio>
+    </a-assets>
+      
+    <!-- <a-marker type = "pattern" url = "https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2Fpattern-marker%20(7).patt?1533251748034" > -->
+    <!--a-marker type = "pattern" url = "https://cdn.glitch.com/1b5c5ba0-db58-4f37-8aa7-f69ae3761543%2Fpattern-logo-pattern.patt?v=1566157398906"-->
+   <a-marker preset = "hiro">      
+    <a-cylinder src="url(https://cdn.glitch.com/3197fee1-d097-431a-b071-f123c4932726%2Fkisspng-amity-university-noida-amity-school-of-engineerin-university-5abe5f14997777.9122123215224256206286.png?v=1571286607371)" radius="3.0" scale="0.5 0.5 0.5" height= "0.05" segments-height="512" segments-width="512">
+		 <a-animation attribute="rotation"
+					dur="1000"
+					from= "-15 10 10"
+					to="10 -15 0"
+					direction="alternate-reverse"
+					repeat="indefinite">
+      </a-animation>
+    </a-cylinder>
+      
+  
+    </a-marker>   
+<!-- 		<a-marker-camera type = "pattern" url = "https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2Fpattern-marker%20(7).patt?1533251748034" >
+    </a-marker-camera> -->
+    
+    <!--a-entity sound="src: url(https://cdn.glitch.com/39bb20d6-efa6-436a-8835-844a0463f4d1%2FAUD-%20bhai.mp3?1533612763908)"></a-entity-->
+    <a-entity camera></a-entity>
+      
+	</a-scene>
+</body>
+</html>
